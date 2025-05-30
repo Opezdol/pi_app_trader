@@ -1,0 +1,1 @@
+https://freedium.cfd/https://medium.com/@japheth.yates/webapp-essentials-a-simple-app-using-fastapi-sqlmodel-and-docker-242cb7a85552
