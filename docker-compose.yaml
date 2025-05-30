@@ -1,0 +1,22 @@
+services:
+  web:
+    build: ./pi_front
+    ports:
+      - "3000:3000"
+    volumes:
+     - ./pi_front/:/app
+     - ./pi_front/node_modules:/app/node_modules
+    environment:
+      NODE_ENV: development
+    stdin_open: true
+    tty: true
+    command: npm start
+
+  backend:
+    build: ./pi_app2
+    ports:
+      - "8000:80"
+    volumes:
+    - type: bind
+      source: ./pi_app2/src
+      target: /app/src
